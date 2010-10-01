@@ -1,0 +1,24 @@
+--- This file is part of LuaDist projecte
+
+name = "sputnik"
+version = "9.03.16"
+
+desc = "A wiki and a framework for wiki-like applications"
+author = "Yuri Takhteyev"
+license = "MIT/X11"
+url = "http://spu.tnik.org"
+maintainer = "Peter Drahoš"
+
+depends = {
+	"lua ~> 5.1",
+  	"saci == 9.03.16",
+  	"cosmo >= 8.04.14",
+	"xssfilter >= 8.07.07",
+	"colors >= 8.05.26",
+	"markdown >= 0.32",
+	"md5 >= 1.1",
+	"wsapi >= 1.0",
+	"luasocket >= 2.0",
+	"coxpcall >= 1.13",
+	"sputnik_markitup >= 9.03.16",
+}
