@@ -1,13 +1,14 @@
-# Copyright (C) 2007-2009 LuaDist.
+# Copyright (C) 2007-2012 LuaDist.
 # Created by Peter Drahoš
 # Redistribution and use of this file is allowed according to the terms of the MIT license.
 # For details see the COPYRIGHT file distributed with LuaDist.
 # Please note that the package source code is licensed under its own license.
 
-PROJECT(sputnik NONE)
-CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
-INCLUDE(dist.cmake)
+project ( sputnik NONE )
+cmake_minimum_required ( VERSION 2.8 )
+include ( cmake/dist.cmake )
+include ( lua )
 
-INSTALL (DIRECTORY lua/sputnik DESTINATION ${INSTALL_LMOD})
-INSTALL (PROGRAMS bin/sputnik.lua DESTINATION ${INSTALL_BIN})
-INSTALL (FILES LICENSE.txt LICENSE_CRYSTAL_ICONS.txt LICENSE_JQUERY.txt LICENSE_YUI.txt DESTINATION ${INSTALL_DATA})
+install ( DIRECTORY lua/sputnik DESTINATION ${INSTALL_LMOD} COMPONENT Runtime )
+install_lua_executable ( sputnik bin/sputnik.lua )
+install_data (LICENSE.txt LICENSE_CRYSTAL_ICONS.txt LICENSE_JQUERY.txt LICENSE_YUI.txt )
